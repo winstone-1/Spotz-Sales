@@ -7,12 +7,71 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-<nav></nav>
+     <header>
+        <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex justify-between items-center h-20">
+                    <div class="text-2xl font-black text-green-600 tracking-tighter">
+                        SPORTZ-SALES
+                        <span class="text-orange-500">.</span>
+                    </div>
+                    <ul class="hidden md:flex items-center gap-8 font-bold text-stone-600">
+                        <li><a href="index.html" class="text-green-600">Home</a></li>
+                        <li><a href="/shop.html" class="hover:text-green-600">Products</a></li>
+                        <li><a href="farmers.html" class="hover:text-green-600">Our Farmers</a></li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center gap-2 text-white bg-stone-900 py-2.5 rounded-xl hover:bg-green-600 transition-colors px-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                </svg>
+                                <span>Cart (0)</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <label for="mobile-menu" class="md:hidden cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-stone-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+           <input type="checkbox" id="mobile-menu" class="peer hidden">
+            <div class="max-h-0 overflow-hidden peer-checked:max-h-64 transition-all duration-300 md:hidden bg-white border-t border-stone-100">
+                <ul class="flex flex-col gap-4 p-6 font-bold text-stone-600">
+                    <li><a href="index.html" class="text-green-600">Home</a></li>
+                    <li><a href="/shop.html">Products</a></li>
+                    <li><a href="farmers.html">Our Farmers</a></li>
+                </ul>
+            </div> 
+        </nav>
     </header>
-    <main>
+     <main class="pt-20">
+        <section class="relative bg-stone-50 py-16 lg:py-24 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="z-10 text-center lg:text-left">
+                    <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-orange-600 uppercase bg-orange-100 rounded-full">Organic & Fresh</span>
+                    <h1 class="text-5xl lg:text-7xl font-black text-stone-900 leading-[1.1] mb-6">
+                        Nature's Candy <br> Delivered <span class="text-green-600">Fresh.</span>
+                    </h1>
+                    <p class="text-lg text-stone-600 mb-8 max-w-lg mx-auto lg:mx-0">
+                        Skip the grocery lines. Get seasonal fruits from local Kenyan farms delivered to your doorstep within 24 hours.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="/shop.html" class="px-8 py-4 bg-green-600 text-white font-bold rounded-2xl shadow-xl shadow-green-100 hover:bg-green-700 transition-all hover:-translate-y-1">Shop Harvest</a>
+                        <a href="#" class="px-8 py-4 bg-white text-stone-900 font-bold rounded-2xl border border-stone-200 hover:bg-stone-50 transition-all">Learn More</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-green-200 rounded-full blur-3xl opacity-40"></div>
+                    <img src="assets\fruit bowl.avif" alt="Fruit bowl" class="relative z-10 w-full rounded-[3rem] shadow-2xl rotate-2">
+                </div>
+            </div>
+        </section>
         <section>
-            <section class="py-16 bg-white">
+            <section class="py-24  bg-white ">
                 <div class="max-w-6xl mx-auto px-6">
                     <div class="flex justify-between align-end mb-12">
                         <div>
@@ -29,7 +88,9 @@
                                 <img src="assets\orange.jpg"
                                  alt="orange"
                                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                 <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded"></span>
+                                 <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded">
+                                    popular
+                                 </span>
                             </div>
                             <div class="flex justify-between items-start">
                                 <div>
@@ -88,9 +149,25 @@
                 </div>
             </section>
             <section>
-                <div class=""></div>
+                <div class="max-w-4xl mx mx-auto px-6 text-center">
+                    <div class="flex justify-center gap-1 text-orange-400">
+                        <span><span>*</span>*</span>
+                    </div>
+                    <h2 class="text-3xl font font-black text-stone-900 mb-8 italic leading-relaxed">*The freshest fruit i've ever seen</h2>
+                    <div class="flex">
+                        <img src="assets\user.jpg" class="w-12 h-15 rounded-full border-2" alt="user">
+                        <div class="text-left">
+                            <p class="font-bold text-stone-900 leading-none">Fredagain</p>
+                            <p class="text-sm text-stone-500 mt-1">Certified Fruits</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </section>
     </main>
+
+
+
 </body>
+
 </html>
